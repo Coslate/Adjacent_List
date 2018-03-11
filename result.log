@@ -1,0 +1,97 @@
+rm -rf ../exec_output/Linked_List.o
+rm -rf ../exec_output/AdjList.o
+rm -rf ../exec_output/AdjList_main.o
+rm -rf ./tags
+g++ -g -Wall -O3 -std=c++11  -c ../Linked_List_ex/Linked_List.cpp  -I ./include  -I ../Linked_List_ex/include -o ../exec_output/Linked_List.o
+g++ -g -Wall -O3 -std=c++11  -c AdjList.cpp  -I ./include  -I ../Linked_List_ex/include -o ../exec_output/AdjList.o
+/usr/local/bin/ctags -R ./*
+/usr/local/bin/ctags -a ./include/* -a ../Linked_List_ex/* -a ../Linked_List_ex/include/*
+g++ -g -Wall -O3 -std=c++11   -I ./include  -I ../Linked_List_ex/include ../exec_output/Linked_List.o ../exec_output/AdjList.o AdjList_main.cpp -o ../exec_output/AdjList_main.o
+../exec_output/AdjList_main.o
+-----------------LinkedListNode-----------------
+node_a = (2147483647, 0x7fe603403270)
+node_b = (2147483647, 0x7fe6034032a0)
+node_h = (2147483647, 0x7fe6034032d0)
+node_i = (2147483647, 0x7fe603403300)
+node_c = (2147483647, 0x7fe603403330)
+node_g = (2147483647, 0x7fe603403370)
+node_f = (2147483647, 0x7fe6034033a0)
+node_d = (2147483647, 0x7fe6034033d0)
+node_e = (2147483647, 0x7fe603403400)
+----------------All node-----------------
+all_node = [a, b, h, i, c, g, f, d, e]
+-----------------Set Adjacent List of Graph(V, E)-----------------
+-----------------AdjList::PrintAdjList, node_a-----------------
+[4 8]
+[b h]
+[0x7fe6034036e0 0x7fe603403890]
+first = 0x7fe6034036e0
+last = 0x7fe603403890
+map_weight[a] = [4(0x7fe603403270, 0x7fe6034032a0), 8(0x7fe603403270, 0x7fe6034032d0)]
+-----------------AdjList::PrintAdjList, node_b-----------------
+[4 8 11]
+[a c h]
+[0x7fe6034037d0 0x7fe603403a30 0x7fe603403b50]
+first = 0x7fe6034037d0
+last = 0x7fe603403b50
+map_weight[b] = [4(0x7fe6034032a0, 0x7fe603403270), 8(0x7fe6034032a0, 0x7fe603403330), 11(0x7fe6034032a0, 0x7fe6034032d0)]
+-----------------AdjList::PrintAdjList, node_h-----------------
+[8 11 1 7]
+[a b g i]
+[0x7fe603403900 0x7fe603403bd0 0x7fe603403c20 0x7fe603403d90]
+first = 0x7fe603403900
+last = 0x7fe603403d90
+map_weight[h] = [8(0x7fe6034032d0, 0x7fe603403270), 11(0x7fe6034032d0, 0x7fe6034032a0), 1(0x7fe6034032d0, 0x7fe603403370), 7(0x7fe6034032d0, 0x7fe603403300)]
+-----------------AdjList::PrintAdjList, node_c-----------------
+[8 2 7 4]
+[b i d f]
+[0x7fe603403aa0 0x7fe603404110 0x7fe6034041e0 0x7fe603404330]
+first = 0x7fe603403aa0
+last = 0x7fe603404330
+map_weight[c] = [8(0x7fe603403330, 0x7fe6034032a0), 2(0x7fe603403330, 0x7fe603403300), 7(0x7fe603403330, 0x7fe6034033d0), 4(0x7fe603403330, 0x7fe6034033a0)]
+-----------------AdjList::PrintAdjList, node_i-----------------
+[7 6 2]
+[h g c]
+[0x7fe603403e00 0x7fe6034040c0 0x7fe603404160]
+first = 0x7fe603403e00
+last = 0x7fe603404160
+map_weight[i] = [7(0x7fe603403300, 0x7fe6034032d0), 6(0x7fe603403300, 0x7fe603403370), 2(0x7fe603403300, 0x7fe603403330)]
+-----------------AdjList::PrintAdjList, node_g-----------------
+[1 2 6]
+[h f i]
+[0x7fe603403cc0 0x7fe6034039e0 0x7fe603404040]
+first = 0x7fe603403cc0
+last = 0x7fe603404040
+map_weight[g] = [1(0x7fe603403370, 0x7fe6034032d0), 2(0x7fe603403370, 0x7fe6034033a0), 6(0x7fe603403370, 0x7fe603403300)]
+-----------------AdjList::PrintAdjList, node_d-----------------
+[7 14 9]
+[c f e]
+[0x7fe603404280 0x7fe603404450 0x7fe603404600]
+first = 0x7fe603404280
+last = 0x7fe603404600
+map_weight[d] = [7(0x7fe6034033d0, 0x7fe603403330), 14(0x7fe6034033d0, 0x7fe6034033a0), 9(0x7fe6034033d0, 0x7fe603403400)]
+-----------------AdjList::PrintAdjList, node_e-----------------
+[10 9]
+[f d]
+[0x7fe603404510 0x7fe603404680]
+first = 0x7fe603404510
+last = 0x7fe603404680
+map_weight[e] = [10(0x7fe603403400, 0x7fe6034033a0), 9(0x7fe603403400, 0x7fe6034033d0)]
+-----------------AdjList::PrintAdjList, node_f-----------------
+[2 4 14 10]
+[g c d e]
+[0x7fe603403f90 0x7fe603404380 0x7fe6034043d0 0x7fe6034044a0]
+first = 0x7fe603403f90
+last = 0x7fe6034044a0
+map_weight[f] = [2(0x7fe6034033a0, 0x7fe603403370), 4(0x7fe6034033a0, 0x7fe603403330), 14(0x7fe6034033a0, 0x7fe6034033d0), 10(0x7fe6034033a0, 0x7fe603403400)]
+It is AdjList destructor.
+It is LinkedList destructor.
+It is LinkedList destructor.
+It is LinkedList destructor.
+It is LinkedList destructor.
+It is LinkedList destructor.
+It is LinkedList destructor.
+It is LinkedList destructor.
+It is LinkedList destructor.
+It is LinkedList destructor.
+It is LinkedList destructor.
