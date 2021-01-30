@@ -37,11 +37,14 @@ void AdjList::SetAdjList(LinkedListNode* const head_node, LinkedListNode* const 
 }
 void AdjList::PrintAdjList(std::unordered_map<std::string, LinkedListNode*> &map_node_st2ll, LinkedListNode* const head_node, const bool debug_addr, const bool debug_name, const bool debug_key){
     int count = 0;
-    LinkedList* the_linked_list = map_linked_list[head_node];
+    LinkedList* the_linked_list;
+
     if(map_linked_list.find(head_node) != map_linked_list.end()){
+        the_linked_list = map_linked_list[head_node];
         the_linked_list->PrintList(debug_addr, debug_name, debug_key);
     }else{
         std::cout<<"Warning : The head_node has no Adjacent List."<<std::endl;
+        return;
     }
 
     LinkedListNode* current_node = the_linked_list->GetFristNode();
