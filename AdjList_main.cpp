@@ -9,8 +9,9 @@ int main(){
     bool debug_addr = true;
     bool debug_name = true;
     bool debug_key = true;
+    bool directed  = false;
     //Declare a new adjacent list to represent Graph(V, E)
-    AdjList a1;
+    AdjList a1(directed);
 
     //Generate the Graph(V, E)
     LinkedListNode* node_a = new LinkedListNode(INT_MAX, "a");
