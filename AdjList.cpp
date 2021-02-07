@@ -43,6 +43,7 @@ void AdjList::PrintAdjList(std::unordered_map<std::string, LinkedListNode*> &map
     int count = 0;
     LinkedList* the_linked_list;
 
+    std::cout<<">>>>> The node:"<<head_node->GetName()<<"("<<head_node<<") : "<<std::endl;
     if(map_linked_list.find(head_node) != map_linked_list.end()){
         the_linked_list = map_linked_list[head_node];
         the_linked_list->PrintList(debug_addr, debug_name, debug_key, debug_explored);

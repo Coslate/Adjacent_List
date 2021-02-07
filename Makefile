@@ -23,12 +23,15 @@ all : clean AdjList all_file_tags
 AdjList : $(MAIN_OBJECT_SOURCE) Linked_List
 	$(CC) $(CFLAGS) $(COMPILE_FLAGS) $(MAIN_OBJECT_SOURCE) $(INCLUDE_FLAGS) -o $(MAIN_OBJECT_EXEC_OUTPUT)$(MAIN_OBJECT_EXEC)
 
-Linked_List : $(SUB_LINKED_LIST_SOURCE_PATH)Linked_List.cpp 
+Linked_List : $(SUB_LINKED_LIST_SOURCE_PATH)Linked_List.cpp | $(MAIN_OBJECT_EXEC_OUTPUT)
 	$(CC) $(CFLAGS) $(COMPILE_FLAGS) $(SUB_LINKED_LIST_SOURCE_PATH)Linked_List.cpp $(INCLUDE_FLAGS) -o $(MAIN_OBJECT_EXEC_OUTPUT)Linked_List.o
 
 all_file_tags : 
 	$(CTAGS_UTIL)ctags -R ./*
 	$(CTAGS_UTIL)ctags $(CTAGS_FLAGS)
+
+$(MAIN_OBJECT_EXEC_OUTPUT): 
+	@mkdir $(MAIN_OBJECT_EXEC_OUTPUT)
 
 clean :
 	rm -rf $(MAIN_OBJECT_EXEC_OUTPUT)Linked_List.o
