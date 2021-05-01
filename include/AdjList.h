@@ -14,8 +14,8 @@ class AdjList : public LinkedListNode, public LinkedList{
     bool show_debug_msg;
 
     public : 
-        AdjList() : LinkedListNode(), LinkedList(), directed(false), show_debug_msg(false){};
-        AdjList(const bool directed=false, const bool show_debug_msg=false) : LinkedListNode(), LinkedList(show_debug_msg), directed(directed), show_debug_msg(show_debug_msg){};
+        AdjList() : LinkedListNode(), LinkedList(false), directed(false), show_debug_msg(false){};
+        AdjList(const bool directed, const bool show_debug_msg) : LinkedListNode(), LinkedList(show_debug_msg), directed(directed), show_debug_msg(show_debug_msg){};
         ~AdjList();
 
         void                SetAdjList(LinkedListNode* const head_node, LinkedListNode* const inserted_node, const int weight);
