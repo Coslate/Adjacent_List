@@ -1,0 +1,95 @@
+rm -rf ./exec_output/Linked_List.o
+rm -rf ./exec_output/AdjList.o
+rm -rf ./exec_output/AdjList_main.o
+rm -rf ./tags
+g++ -g -Wall -O3 -std=c++11  -c ../Linked_List/Linked_List.cpp  -I ./include  -I ../Linked_List/include -o ./exec_output/Linked_List.o
+g++ -g -Wall -O3 -std=c++11  -c AdjList.cpp  -I ./include  -I ../Linked_List/include -o ./exec_output/AdjList.o
+/usr/local/bin/ctags -R ./*
+/usr/local/bin/ctags -a ./include/* -a ../Linked_List/* -a ../Linked_List/include/*
+g++ -g -Wall -O3 -std=c++11   -I ./include  -I ../Linked_List/include ./exec_output/Linked_List.o ./exec_output/AdjList.o AdjList_main.cpp -o ./exec_output/AdjList_main.o
+./exec_output/AdjList_main.o
+-----------------LinkedListNode-----------------
+node_a = (2147483647, 0x55733d196eb0)
+node_b = (2147483647, 0x55733d196f20)
+node_h = (2147483647, 0x55733d196f90)
+node_i = (2147483647, 0x55733d197000)
+node_c = (2147483647, 0x55733d197070)
+node_g = (2147483647, 0x55733d1970e0)
+node_f = (2147483647, 0x55733d197150)
+node_d = (2147483647, 0x55733d1971c0)
+node_e = (2147483647, 0x55733d197230)
+----------------All node-----------------
+all_node = [a, b, h, i, c, g, f, d, e]
+-----------------Set Adjacent List of Graph(V, E)-----------------
+-----------------AdjList::PrintAdjList, node_a-----------------
+>>>>> The node:a(0x55733d196eb0) : 
+[4 8]
+[b h]
+[0x55733d1986b0 0x55733d198a40]
+first = 0x55733d1986b0
+last = 0x55733d198a40
+map_weight[a] = [4(0x55733d196eb0, 0x55733d196f20), 8(0x55733d196eb0, 0x55733d196f90)]
+-----------------AdjList::PrintAdjList, node_b-----------------
+>>>>> The node:b(0x55733d196f20) : 
+[4 8 11]
+[a c h]
+[0x55733d1988d0 0x55733d198c40 0x55733d198e60]
+first = 0x55733d1988d0
+last = 0x55733d198e60
+map_weight[b] = [4(0x55733d196f20, 0x55733d196eb0), 8(0x55733d196f20, 0x55733d197070), 11(0x55733d196f20, 0x55733d196f90)]
+-----------------AdjList::PrintAdjList, node_h-----------------
+>>>>> The node:h(0x55733d196f90) : 
+[8 11 1 7]
+[a b g i]
+[0x55733d198af0 0x55733d198ef0 0x55733d198f80 0x55733d1991f0]
+first = 0x55733d198af0
+last = 0x55733d1991f0
+map_weight[h] = [8(0x55733d196f90, 0x55733d196eb0), 11(0x55733d196f90, 0x55733d196f20), 1(0x55733d196f90, 0x55733d1970e0), 7(0x55733d196f90, 0x55733d197000)]
+-----------------AdjList::PrintAdjList, node_c-----------------
+>>>>> The node:c(0x55733d197070) : 
+[8 2 7 4]
+[b i d f]
+[0x55733d198cf0 0x55733d199750 0x55733d199870 0x55733d199a90]
+first = 0x55733d198cf0
+last = 0x55733d199a90
+map_weight[c] = [8(0x55733d197070, 0x55733d196f20), 2(0x55733d197070, 0x55733d197000), 7(0x55733d197070, 0x55733d1971c0), 4(0x55733d197070, 0x55733d197150)]
+-----------------AdjList::PrintAdjList, node_i-----------------
+>>>>> The node:i(0x55733d197000) : 
+[7 6 2]
+[h g c]
+[0x55733d1992a0 0x55733d1996c0 0x55733d1997e0]
+first = 0x55733d1992a0
+last = 0x55733d1997e0
+map_weight[i] = [7(0x55733d197000, 0x55733d196f90), 6(0x55733d197000, 0x55733d1970e0), 2(0x55733d197000, 0x55733d197070)]
+-----------------AdjList::PrintAdjList, node_g-----------------
+>>>>> The node:g(0x55733d1970e0) : 
+[1 2 6]
+[h f i]
+[0x55733d199030 0x55733d199410 0x55733d199630]
+first = 0x55733d199030
+last = 0x55733d199630
+map_weight[g] = [1(0x55733d1970e0, 0x55733d196f90), 2(0x55733d1970e0, 0x55733d197150), 6(0x55733d1970e0, 0x55733d197000)]
+-----------------AdjList::PrintAdjList, node_d-----------------
+>>>>> The node:d(0x55733d1971c0) : 
+[7 14 9]
+[c f e]
+[0x55733d199920 0x55733d199c40 0x55733d199f30]
+first = 0x55733d199920
+last = 0x55733d199f30
+map_weight[d] = [7(0x55733d1971c0, 0x55733d197070), 14(0x55733d1971c0, 0x55733d197150), 9(0x55733d1971c0, 0x55733d197230)]
+-----------------AdjList::PrintAdjList, node_e-----------------
+>>>>> The node:e(0x55733d197230) : 
+[10 9]
+[f d]
+[0x55733d199d80 0x55733d199fc0]
+first = 0x55733d199d80
+last = 0x55733d199fc0
+map_weight[e] = [10(0x55733d197230, 0x55733d197150), 9(0x55733d197230, 0x55733d1971c0)]
+-----------------AdjList::PrintAdjList, node_f-----------------
+>>>>> The node:f(0x55733d197150) : 
+[2 4 14 10]
+[g c d e]
+[0x55733d1994c0 0x55733d199b20 0x55733d199bb0 0x55733d199cd0]
+first = 0x55733d1994c0
+last = 0x55733d199cd0
+map_weight[f] = [2(0x55733d197150, 0x55733d1970e0), 4(0x55733d197150, 0x55733d197070), 14(0x55733d197150, 0x55733d1971c0), 10(0x55733d197150, 0x55733d197230)]
