@@ -15,6 +15,7 @@ class AdjList : public LinkedListNode, public LinkedList{
 
     public : 
         AdjList() : LinkedListNode(), LinkedList(false), directed(false), show_debug_msg(false){};
+        AdjList(const bool directed) : LinkedListNode(), LinkedList(false), directed(directed), show_debug_msg(false){};
         AdjList(const bool directed, const bool show_debug_msg) : LinkedListNode(), LinkedList(show_debug_msg), directed(directed), show_debug_msg(show_debug_msg){};
         ~AdjList();
 
