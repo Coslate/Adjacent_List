@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <AdjList.h>
 
+//Destructor
 AdjList::~AdjList(){
     if(show_debug_msg){
         std::cout<<"It is AdjList destructor."<<std::endl;
