@@ -7,10 +7,14 @@
 AdjList::~AdjList(){
     if(show_debug_msg){
         std::cout<<"It is AdjList destructor."<<std::endl;
+        std::cout<<"collect_linked_list.size() = "<<collect_linked_list.size()<<std::endl;
     }
     for(size_t i=0;i<collect_linked_list.size();++i){
         LinkedList* the_linked_list = collect_linked_list[i];
         delete the_linked_list;
+    }
+    if(show_debug_msg){
+        std::cout<<"It is AdjList destructor done."<<std::endl;
     }
 }
 void AdjList::SetAdjList(LinkedListNode* const head_node, LinkedListNode* const inserted_node, const int weight){
